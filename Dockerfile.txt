@@ -1,0 +1,7 @@
+FROM osrm/osrm-backend
+
+WORKDIR /data
+
+COPY NSUT_MAP_FINAL /data
+
+CMD ["osrm-routed", "/data/nsut_map_final.osrm"]
